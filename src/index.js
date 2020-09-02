@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text } from "react-native";
 import { getAllPokemon, getPokemon } from './services/pokemon';
 
+import Card from './components/Card';
+
 function Index(){
 
   const [ pokemonData, setPokemonData] = useState([]);
@@ -43,8 +45,11 @@ function Index(){
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
+      backgroundColor: "#dcdcdc"
     }}>
-      <Text>xDxD</Text>
+      <Card 
+        data={pokemonData}
+      />
     </View>
   )
 }
