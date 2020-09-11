@@ -7,29 +7,32 @@ function Card(pokemonData){
   const data = pokemonData.data;
  
 if(data.length > 0){
-  console.log(data[2].sprites.front_default);
   return(
     // data.map(poke => {
       <View  style={page.container}>
-      <View style={page.image}>
-        <Image style={page.teste} source={{uri: data[12].sprites.front_default}}
+      <View style={page.imageView}>
+        <Image style={page.image} source={{uri: data[0].sprites.front_default}}
           
          />
       </View>
 
-      <View style={page.name}>
-        <Text>{data[2].name}</Text>
+      <View style={page.nameView}>
+        <Text style={page.name}>{data[0].name}</Text>
 
       </View>
 
-      <View style={page.types}>
-        <Text>TYPES</Text>
-
+      <View style={page.typesView}>
+        {data[0].types.map(type => (
+            <Text style={page.types}>
+              {type.type.name}
+            </Text>
+        ))}
       </View>
 
-      <View style={page.data}>
-        <Text>DATA</Text>
-
+      <View style={page.dataView}>
+        <Text style={page.dataText}>Ability: {data[0].abilities[0].ability.name}</Text>
+        <Text style={page.dataText}>Weight: {data[0].weight}</Text>
+        <Text style={page.dataText}>Height: {data[0].height}</Text>
       </View>
     </View>
 // })

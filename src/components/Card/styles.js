@@ -8,7 +8,7 @@ const page = StyleSheet.create({
     backgroundColor: 'white',
   },
   
-  image: {
+  imageView: {
     // backgroundColor: 'red',
     height: '40%',
     minWidth: 300,
@@ -17,32 +17,48 @@ const page = StyleSheet.create({
     margin: 5
   },
   
-  name: {
+  image: {
+    width: '60%',
+    height: 55,
+    // backgroundColor: 'blue',
+    marginTop: 20
+  },
+  
+  nameView: {
     // backgroundColor: 'yellow',
     minWidth: 300,
     alignItems: 'center',
-    margin: 5
+    margin: 5,
   },
-
-  types: {
+  
+  name: {
+    fontSize: 20,    
+  },
+  
+  typesView: {
     // backgroundColor: 'green',
     minWidth: 300,
+    margin: 5,
     alignItems: 'center',
-    margin: 5
-
+    justifyContent: 'center',
+    flexDirection: 'row'
+  },
+  
+  types: {
+    fontSize: 20,
+    margin: 5,
   },
 
-  data: {
+  dataView: {
     // backgroundColor: 'purple',
     minWidth: 300,
     alignItems: 'center',
-    justifyContent: 'flex-end',
     margin: 5
   },
+  
+  dataText: {
+    fontSize: 18,
 
-  teste: {
-    width: 55,
-    height: 55
   }
 });
 
