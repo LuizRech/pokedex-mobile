@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text } from "react-native";
-import { getAllPokemon, getPokemon } from './services/pokemon';
+import { getAllPokemon, getPokemon } from '../../services/pokemon';
 
-import Card from './components/Card';
+import Card from '../../components/Card';
 
-function Index(){
+function Initial(){
 
   const [ pokemonData, setPokemonData] = useState([]);
   const [ prevPage, setPrevPage ] = useState('');
   const [ nextPage, setNextPage ] = useState('');
-  
+
   const [ urlToFetch, setUrlToFetch ] = useState('https://pokeapi.co/api/v2/pokemon');
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function Index(){
       setPrevPage(response.previous);
 
       await getPokemonData(response.results);
-      
+
     }
 
     loadPokemon();
@@ -39,19 +39,13 @@ function Index(){
 
   }
 
-  return(
-    <View
-    style={{
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "#dcdcdc"
-    }}>
-      <Card 
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+       <Card 
         data={pokemonData}
       />
     </View>
-  )
+  );
 }
 
-export default Index;
+export default Initial;
