@@ -40,7 +40,7 @@ function Initial(){
   }
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#dcdcdc' }}>
        <Card 
         data={pokemonData}
       />

@@ -1,45 +1,52 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, FlatList} from 'react-native';
 
 import page from './styles';
 
 function Card(pokemonData){
-  const data = pokemonData.data;
+  const pokez = pokemonData.data;
  
-if(data.length > 0){
-  return(
-    // data.map(poke => {
-      <View  style={page.container}>
-      <View style={page.imageView}>
-        <Image style={page.image} source={{uri: data[0].sprites.front_default}}
-          
-         />
-      </View>
+  if(pokez.length > 0){
+    return (
+      <FlatList 
+        data={pokez}
+        keyExtractor={poke => poke.id.toString()}
+        renderItem={(poke) => {
+          return(  
+            <View  style={page.container} key={poke.item.id.toString()}>
+              <View style={page.imageView}>
+                <Image
+                  style={page.image} 
+                  source={{uri: poke.item.sprites.front_default}}
+                  resizeMode="contain"
+                />
+              </View>
 
-      <View style={page.nameView}>
-        <Text style={page.name}>{data[0].name}</Text>
+              <View style={page.nameView}>
+                <Text style={page.name}>{poke.item.name}</Text>
+              </View>
 
-      </View>
+              <View style={page.typesView}>
+                {poke.item.types.map(type => (
+                  <Text style={page.types} key={type.type.name.toString()}>
+                      {type.type.name}
+                    </Text>
+                ))}
+              </View>
 
-      <View style={page.typesView}>
-        {data[0].types.map(type => (
-            <Text style={page.types}>
-              {type.type.name}
-            </Text>
-        ))}
-      </View>
-
-      <View style={page.dataView}>
-        <Text style={page.dataText}>Ability: {data[0].abilities[0].ability.name}</Text>
-        <Text style={page.dataText}>Weight: {data[0].weight}</Text>
-        <Text style={page.dataText}>Height: {data[0].height}</Text>
-      </View>
-    </View>
-// })
-  )
-}else{
-  return <Text>Loading...</Text>
-}
+              <View style={page.dataView}>
+                <Text style={page.dataText}>Ability: {poke.item.abilities[0].ability.name}</Text>
+                <Text style={page.dataText}>Weight: {poke.item.weight}</Text>
+                <Text style={page.dataText}>Height: {poke.item.height}</Text>
+              </View>
+            </View>
+          )
+        }}
+      />
+    )
+  }else{
+    return <Text>Loading...</Text>
+  }
 }
 
 export default Card;
