@@ -6,7 +6,7 @@ const page = StyleSheet.create({
     height: 300,
     borderRadius: 20,
     backgroundColor: 'white',
-    marginTop: 50
+    marginTop: 35
   },
   
   imageView: {

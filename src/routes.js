@@ -11,7 +11,7 @@ export default function Routes(){
         <NavigationContainer>
 
             <Stack.Navigator 
-              screenOptions={{ headerShown: false }}
+              // screenOptions={{ headerShown: false }}
               >
                 <Stack.Screen name="Initial" component={Initial} />
             </Stack.Navigator>
