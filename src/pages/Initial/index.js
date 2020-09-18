@@ -59,7 +59,7 @@ function Initial(){
         data={pokemonData}
       />
 
-      <View style={styles.bttnView}>
+      {/* <View style={styles.bttnView}>
         <TouchableOpacity style={styles.bttnTouchable} onPress={() => {prevPage ? setUrlToFetch(prevPage) : Alert.alert("Isn't possible!")}}>
           <Text style={styles.bttnText}>
             Previous
@@ -70,7 +70,7 @@ function Initial(){
             Next
           </Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </View>
   );
 }

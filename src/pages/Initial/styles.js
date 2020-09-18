@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     marginLeft: -15,
-    marginTop: 35
+    marginTop: 35,
+    marginBottom: 15
   },
   
   bttnTouchable: {

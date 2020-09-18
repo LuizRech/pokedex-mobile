@@ -13,7 +13,7 @@ export default function Routes(){
             <Stack.Navigator 
               // screenOptions={{ headerShown: false }}
               >
-                <Stack.Screen name="Initial" component={Initial} />
+                <Stack.Screen name="Pokedex" component={Initial} />
             </Stack.Navigator>
 
         </NavigationContainer>
