@@ -6,27 +6,24 @@ const page = StyleSheet.create({
     height: 300,
     borderRadius: 20,
     backgroundColor: 'white',
-    marginTop: 35
+    marginTop: 35,
   },
   
   imageView: {
-    // backgroundColor: 'red',
     height: '40%',
     minWidth: 300,
     borderRadius: 20,
     alignItems: 'center',
-    margin: 5
+    margin: 5,
   },
   
   image: {
     width: '60%',
     height: 125,
     marginTop: 10,
-    // backgroundColor: 'blue',
   },
   
   nameView: {
-    // backgroundColor: 'yellow',
     minWidth: 300,
     alignItems: 'center',
     margin: 5,
@@ -37,29 +34,32 @@ const page = StyleSheet.create({
   },
   
   typesView: {
-    // backgroundColor: 'green',
     minWidth: 300,
     margin: 5,
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   
   types: {
     fontSize: 20,
     margin: 5,
+
+    borderWidth: 1,
+    borderColor: '#8f8f8fcd',
+    borderRadius: 20,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
   },
 
   dataView: {
-    // backgroundColor: 'purple',
     minWidth: 300,
     alignItems: 'center',
-    margin: 5
+    margin: 5,
   },
   
   dataText: {
     fontSize: 18,
-
   }
 });
 

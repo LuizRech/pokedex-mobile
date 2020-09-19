@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image, FlatList} from 'react-native';
 
 import page from './styles';
+import types from './types';
 
 function Card(pokemonData){
   const pokez = pokemonData.data;
@@ -27,11 +28,13 @@ function Card(pokemonData){
               </View>
 
               <View style={page.typesView}>
-                {poke.item.types.map(type => (
-                  <Text style={page.types} key={type.type.name.toString()}>
-                      {type.type.name}
+                {poke.item.types.map(type => {
+                  return(
+                    <Text style={[page.types, types(type.type.name)]} key={type.type.name.toString()}>
+                        {type.type.name}
                     </Text>
-                ))}
+                  )
+                })}
               </View>
 
               <View style={page.dataView}>
