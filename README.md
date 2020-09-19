@@ -15,6 +15,14 @@
   </a>
 </p>
 
+<hr />
+
+<img src="./ReadmeImages/Demo_IMG1.JPG" alt="Image Example 1">
+<hr />
+<img src="./ReadmeImages/Demo_IMG2.JPG" alt="Image Example 2">
+
+<hr />
+
 ## 🚀 How to use
 
 - Install packages with `yarn` or `npm install`.
