@@ -15,6 +15,11 @@
   </a>
 </p>
 
+</hr>
+
+Check the web version <3 [https://github.com/LuizRech/pokedex](https://github.com/LuizRech/pokedex)
+
+
 <hr />
 
 <img src="./ReadmeImages/Demo_IMG1.JPG" alt="Image Example 1">
